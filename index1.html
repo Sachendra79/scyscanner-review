@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScyScanner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-m6eXF2rN0P2dHsJk1ZrwgFlmLbJF62B6s9kU3qy3ZIhZb/B3N/++sP2VeS7U1RgHcEo8x37aT6j/XdE4UMI46g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="d-flex flex-column w-100">
+      <!-- Navbar section -->
+      <div
+        class="img-fluid position-relative"
+        style="
+          height: 17rem;
+          
+          background: linear-gradient(rgba(117, 116, 116, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/a.jpg') no-repeat center center/cover;
+         
+      
+        "
+      >
+        <nav class="navbar position-absolute w-100 d-flex flex-column" style="z-index: 1; ">
+          <div class="container-fluid">
+            <div class="row align-items-center w-100 container-lg m-auto">
+              <div class="col-12 d-flex justify-content-between pt-3 ">
+                <div class="d-flex justify-content-between " style="gap: 30vw;">
+                
+                  <div class="p-1  mx-lg-0">
+                    <img src="./assets/lgo.png" alt="" style="width: 70% ; " />
+                  </div>
+                  <button
+                  class="navbar-toggler d-lg-none border-0"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon border-0 outline-none" style="filter: invert(1);"></span>
+                </button>
+                </div>
+                <div
+                  class="d-lg-flex d-none justify-content-center align-items-center fw-bold "
+                 
+                >
+                <div class="d-flex justify-content-center">
+                  <a href="#" id="more" class="text-white rounded-3 mx-3 p-2 px-4 fs-5 text-decoration-none hover-red">More</a>
+                  <a href="#" id="post" class="text-white rounded-3 mx-3 p-2 px-4 fs-5 text-decoration-none hover-red">Post</a>
+                  <a href="#" id="discover" class="text-white rounded-3 mx-3 p-2 fs-5 text-decoration-none hover-red">Discover</a>
+                </div>
+                
+                  <button
+                    id="globalIcon2"
+                    class="border-2 border-end rounded-0 mx-2 btn globe-icon text-white bg-transparent"
+                    data-bs-toggle="modal"
+                    data-bs-target="#preferencesModal"
+                  >
+                    <i class="fs-5 fas fa-globe"></i>
+                  </button>
+                <button id="InButton" class="btn m-1 fw-bold px-3 fs-5 btn-hove loading-button " style="background-color: rgb(255, 68, 0); color: #fff; width: 8rem;">
+                    <span class="btn-text">Sign in</span>
+                    <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
+                </button>
+                  
+                </div>
+               
+              </div>
+            </div>
+
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+               
+                <button
+                  type="button"
+                  class="btn-close accordion-button fw-bold"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-2">
+                  <li class="nav-item">
+                    <div class="d-flex">
+                      <button
+                        id="globalIcon1"
+                        class="border-0 btn globe-icon text-dark bg-transparent "
+                      >
+                        <i class="fs-5 fas fa-globe"></i>
+                      </button>
+                      <span class="border-end p-1">India, EN</span>
+                      <span class="p-1"> INR</span>
+                    </div>
+                    <div class="d-flex flex-column py-3 fw-bold border-bottom">
+                      <a href="#" class="nav-link"
+                        ><small>Write a review</small></a
+                      >
+                      <a href="#" class="nav-link"><small>Trip</small></a>
+                      <a href="#" class="nav-link"
+                        ><small>Travellers's choice</small></a
+                      >
+                      <a href="#" class="nav-link"
+                        ><small>Travel Stories</small></a
+                      >
+                    </div>
+                    <div class="d-flex flex-column py-3 fw-bold border-bottom">
+                      <a href="#" class="nav-link"><small>Hotels</small></a>
+                      <a href="#" class="nav-link"
+                        ><small>Things to Do</small></a
+                      >
+                      <a href="#" class="nav-link"
+                        ><small>Restaurants</small></a
+                      >
+                      <a href="#" class="nav-link"><small>Flights</small></a>
+                      <a href="#" class="nav-link"
+                        ><small>Holiday Homes</small></a
+                      >
+                      <a href="#" class="nav-link"><small>Forums</small></a>
+                    </div>
+                    <div class="d-flex flex-column fw-bold border-bottom">
+                      <a href="#" class="nav-link"
+                        ><small>Post photos</small></a
+                      >
+                      <a href="#" class="nav-link"
+                        ><small>Add a place</small></a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+
+          <div class="col-12 container-lg mt-lg-5 mt-md-4 mt-3">
+            <div class="text-white d-flex flex-wrap align-items-center fs-1" style="margin-left: 1rem;">
+              <b class="fs-1">Is</b>
+              <div class="mx-2 position-relative">
+                <input type="text" id="inp1" placeholder="Uber" class="form-control auto-resize-input p-0 border-3 border-bottom rounded-0"
+                       oninput="resizeInput(this)"
+                       style="border: none; color: red; width: 8rem; margin-top: 1vh; font-size: 2rem; font-weight: 800; background-color: transparent;">
+              </div>
+              <b class="mx-2 text-nowrap fs-1">Available in</b>
+              <div class="mx-2 position-relative">
+                <input type="text" placeholder="Kolkata" id="addressInput" class="form-control p-0 auto-resize-input border-3 border-bottom rounded-0"
+                       style="border: none; color: red; width: 10rem; margin-top: 1vh; font-size: 2rem; font-weight: 800; background: transparent;"
+                       oninput="resizeInput(this)">
+                      
+              </div>
+              ?
+              <div>
+                <div id="suggestionsBox" class="suggestions rounded-2 shadow-xl mt-2 me-5 text-dark bg-light position-absolute " style=" display: none;
+                height: fit-content;
+                width: 18rem;
+              
+                z-index: 1000;
+          
+               bottom: -13rem;"></div>
+              <button id="InButton" class="btn m-1 fw-bold px-3 fs-5 btn-hover loading-button" style="background-color: rgb(255, 68, 0); color: #fff; width: 8rem;">
+                <span class="btn-text">Sign in</span>
+                <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
+              </button>
+
+              </div>
+             
+            </div>
+          </div>
+          
+
+        </nav>
+      </div>
+
+      <!-- Main section -->
+      <section class="container-fluid">
+        <div class="container">
+          <div class="container flex-column-sm d-lg-flex py-3 py-lg-5">
+            <div class="row">
+              <!-- //main-row  -->
+              <div class="col-12 col-lg-8">
+                <!-- //main-columns -->
+                <div class="row shadow border m-lg-1 mb-4 rounded-3">
+                  <div class="col rounded-3 pt-3 pb-3 p-lg-3">
+                    <div class="alert alert-success" role="alert">
+                      A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      A simple warning alert—check it out!
+                    </div>
+                    <div class="m-3 my-4 text-dark">
+                      Lorem ipsum sint quis, dolor sit amet consectetur
+                      adipisicing elit. A, ipsum, delectus ex voluptatibus
+                      distinctio sint quis, ratione ea nihil quibusdam eaque
+                      blanditiis alias consectetur
+                    </div>
+                    <div class="m-3 my-4 text-dark">
+                      Lorem ipsum sint quis, dolor sit amet consectetur
+                      adipisicing elit. A, ipsum, delectus ex voluptatibus sint
+                      quis, ratione ea nihil quibusdam eaque blanditiis alias
+                      consectetur
+                    </div>
+                    <div class="m-3 mt-4 text-dark">
+                      Lorem ipsum sint quis, dolor sit amet consectetur
+                      adipisicing elit. A, ipsum, delectus ex voluptatibus sint
+                      quis, ratione ea nihil quibusdam eaque blanditiis alias
+                      consectetur
+                    </div>
+
+                    <div class="accordion-items m-3">
+                      <button
+                        id="readMore"
+                        class="accordion-button fw-bold bg-transparent collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne"
+                      >
+                        <span class="text-color text-danger ">Read more>></span>
+                      </button>
+                      <div
+                        id="flush-collapseOne"
+                        class="accordion-collapse text-dark collapse"
+                      >
+                        <div class="accordion-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Quia, similique soluta atque ducimus tempore
+                          adipisci? Aspernatur est excepturi exercitationem
+                          adipisci quia ipsam laudantium ducimus debitis
+                          molestiae ut, voluptas porro sed.
+                        </div>
+                      </div>
+                      <button
+                        id="readLess"
+                        class="accordion-button fw-bold bg-transparent collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne"
+                        style="display: none"
+                      >
+                        <span class="text-color py-3 text-danger">
+                          << Read less</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- //vertically alligned list section -->
+                <div
+                  class="row relative shadow border my-4 px-3 mx-lg-1 rounded-3"
+                >
+                  <h1 class="fw-bold mt-4 mx-2">Best fit for your Search</h1>
+                  <p class="mx-2">
+                    <small
+                      >Lorem elit. Et assumenda, minima totam atque id unde ipsa
+                      obcaecati veniam numquam alias corporis aut.</small
+                    >
+                  </p>
+                  <div class="scrollable-box1 verticle p-0 m-0">
+                    <div class="row">
+                      <!-- Second-row -->
+                      <div class="col">
+                        <div class="row rounded-3 mb-3">
+                          <div class="d-lg-flex bg-white rounded-3">
+                            <div
+                              class="col-lg-4 col-12 text-danger position-relative"
+                            >
+                              <img
+                                src="./assets/31873.jpg"
+                                class="img-fluid card-img-top rounded-3 h-100"
+                                alt="..."
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 start-0 p-2 m-1 bg-white rounded-5"
+                              ></i>
+                            </div>
+
+                            <div class="col-lg-8 col-12 mx-2 pt-lg-1 pt-3">
+                              <div class="card-body">
+                                <span
+                                  class="bg-warning text-white px-2 m-lg-0 p-1 rounded-3"
+                                  >4.5
+                                  <i
+                                    class="fa fa-star mx-1"
+                                    aria-hidden="true"
+                                  ></i
+                                ></span>
+                                <h2 class="card-title mt-2">
+                                  Tajmahal - placed in Agra
+                                </h2>
+                                <p class="card-text mt-2">
+                                  Some example text to fill the card. This could
+                                  be a description or any other information
+                                </p>
+                                <button class="btn btn-danger btn-hover loading-button" style="
+                              background-color: rgb(255, 68, 0);
+                             color: #fff;
+                             width: 8rem;
+                            ">
+                            
+                            <span class="btn-text fw-bold">Find now</span>
+                            <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
+                          </button>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="mt-3" />
+                        </div>
+
+                        <div class="row rounded-3 mb-3">
+                          <div class="d-lg-flex bg-white rounded-3">
+                            <div
+                              class="col-lg-4 col-12 text-danger position-relative"
+                            >
+                              <img
+                                src="./assets/31873.jpg"
+                                class="img-fluid card-img-top rounded-3 h-100"
+                                alt="..."
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 start-0 m-1 p-2 bg-white rounded-5"
+                              ></i>
+                            </div>
+
+                            <div class="col-lg-8 col-12 mx-2 pt-lg-1 pt-3">
+                              <div class="card-body">
+                                <span
+                                  class="bg-warning text-white px-2 m-lg-0 p-1 rounded-3"
+                                  >4.5
+                                  <i
+                                    class="fa fa-star mx-1"
+                                    aria-hidden="true"
+                                  ></i
+                                ></span>
+                                <h2 class="card-title mt-2">
+                                  Tajmahal - placed in Agra
+                                </h2>
+                                <p class="card-text mt-2">
+                                  Some example text to fill the card. This could
+                                  be a description or any other information
+                                </p>
+                                <button class="btn btn-danger btn-hover loading-button" style="
+                                background-color: rgb(255, 68, 0);
+                               color: #fff;
+                               width: 8rem;
+                              ">              <span class="btn-text fw-bold">Find now</span>
+                <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="mt-3" />
+                        </div>
+                        <div class="row rounded-3 mb-3">
+                          <div class="d-lg-flex bg-white rounded-3">
+                            <div
+                              class="col-lg-4 col-12 text-danger position-relative"
+                            >
+                              <img
+                                src="./assets/31873.jpg"
+                                class="img-fluid card-img-top rounded-3 h-100"
+                                alt="..."
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 start-0 m-1 p-2 bg-white rounded-5"
+                              ></i>
+                            </div>
+
+                            <div class="col-lg-8 col-12 mx-2 p-lg-1 pt-3">
+                              <div class="card-body">
+                                <span
+                                  class="bg-warning text-white px-2 m-lg-0 p-1 rounded-3"
+                                  >4.5
+                                  <i
+                                    class="fa fa-star mx-1"
+                                    aria-hidden="true"
+                                  ></i
+                                ></span>
+                                <h2 class="card-title mt-2">
+                                  Tajmahal - placed in Agra
+                                </h2>
+                                <p class="card-text mt-2">
+                                  Some example text to fill the card. This could
+                                  be a description or any other information
+                                </p>
+                                <button class="btn btn-danger btn-hover loading-button" style="
+                                background-color: rgb(255, 68, 0);
+                               color: #fff;
+                               width: 8rem;
+                              ">              <span class="btn-text fw-bold">Find now</span>
+                <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="mt-3" />
+                        </div>
+                        <div class="row rounded-3 mb-4">
+                          <div class="d-lg-flex bg-white rounded-3">
+                            <div
+                              class="col-lg-4 col-12 text-danger position-relative"
+                            >
+                              <img
+                                src="./assets/31873.jpg"
+                                class="img-fluid card-img-top rounded-3 h-100"
+                                alt="..."
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 start-0 m-1 p-2 bg-white rounded-5"
+                              ></i>
+                            </div>
+
+                            <div class="col-lg-8 col-12 mx-2 p-lg-1 pt-3 ">
+                              <div class="card-body">
+                                <span
+                                  class="bg-warning text-white px-2 m-lg-0 p-1 rounded-3"
+                                  >4.5
+                                  <i
+                                    class="fa fa-star mx-1"
+                                    aria-hidden="true"
+                                  ></i
+                                ></span>
+                                <h2 class="card-title mt-2">
+                                  Tajmahal - placed in Agra
+                                </h2>
+                                <p class="card-text mt-2">
+                                  Some example text to fill the card. This could
+                                  be a description or any other information
+                                </p>
+                                <button class="btn btn-danger btn-hover loading-button" style="
+                                background-color: rgb(255, 68, 0);
+                               color: #fff;
+                               width: 8rem;
+                              ">              <span class="btn-text fw-bold">Find now</span>
+                <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <hr class="mt-3" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //Horizontally alligned list section -->
+                <div
+                  class="row shadow border rounded-3 my-4 mx-lg-1"
+                  style="padding-inline-end: 10px"
+                >
+                  <h1 class="fw-bold mt-4 mx-2">Best fit for your Search</h1>
+                  <p class="mx-2">
+                    <small
+                      >Lorem elit. Et assumenda, minima totam atque id unde ipsa
+                      obcaecati veniam numquam alias corporis aut.</small
+                    >
+                  </p>
+
+                  <div class="col-12 position-relative">
+                    <div id="carouselExampleControls" class="carousel">
+                      <div class="carousel-inner p-2">
+                        <!-- Carousel items go here -->
+                        <div class="carousel-item active" >
+                          <div class="card m-2 "   >
+                            <div class="position-relative">
+                              <img
+                                src="./assets/c.jpg"
+                                class="card-img-top"
+                                alt="Placeholder Image"
+                                style="height: 8rem"
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 start-0 m-1  p-2 bg-white rounded-circle"
+                                style="color: red"
+                              ></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Tajmahal-in Agara</h5>
+                              <p class="card-text">
+                                Some example text to fill the card. This is
+                                could be a description or any another in
+                                information.
+                              </p>
+                              <span
+                                ><small class="text-muted"
+                                  >Date and Time: April 26, 2024</small
+                                ></span
+                              >
+                              <div
+                                class="star-rating d-flex flex-row-reverse justify-content-end gap-1"
+                              >
+                                <input
+                                  type="radio"
+                                  id="star5"
+                                  name="rating1"
+                                  value="5"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star5"
+                                  title="Excellent"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star4"
+                                  name="rating1"
+                                  value="4"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star4"
+                                  title="Very good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+
+                                <input
+                                  type="radio"
+                                  id="star3"
+                                  name="rating1"
+                                  value="3"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star3"
+                                  title="Good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star2"
+                                  name="rating1"
+                                  value="2"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star2"
+                                  title="Fair"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star1"
+                                  name="rating1"
+                                  value="1"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star1"
+                                  title="Poor"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                              </div>
+                              <button class="btn btn-danger btn-hover loading-button" style="background-color: rgb(255, 68, 0); color: #fff;  width: 8rem;">
+                                <span class="btn-text fw-bold">Click me</span>
+                                <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
+                            </button>
+                            </div>
+                          </div>
+                        </div>
+                       
+                        <div class="carousel-item active">
+                          <div class="card m-2">
+                            <div class="position-relative">
+                              <img
+                                src="./assets/c.jpg"
+                                class="card-img-top"
+                                alt="Placeholder Image"
+                                style="height: 8rem"
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 m-1 start-0 p-2 bg-white rounded-circle"
+                                style="color: red"
+                              ></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Tajmahal-in Agara</h5>
+                              <p class="card-text">
+                                Some example text to fill the card. This is
+                                could be a description or any another in
+                                information.
+                              </p>
+                              <span
+                                ><small class="text-muted"
+                                  >Date and Time: April 26, 2024</small
+                                ></span
+                              >
+                              <div
+                                class="star-rating d-flex flex-row-reverse justify-content-end gap-1"
+                              >
+                                <input
+                                  type="radio"
+                                  id="star5"
+                                  name="rating1"
+                                  value="5"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star5"
+                                  title="Excellent"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star4"
+                                  name="rating1"
+                                  value="4"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star4"
+                                  title="Very good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+
+                                <input
+                                  type="radio"
+                                  id="star3"
+                                  name="rating1"
+                                  value="3"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star3"
+                                  title="Good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star2"
+                                  name="rating1"
+                                  value="2"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star2"
+                                  title="Fair"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star1"
+                                  name="rating1"
+                                  value="1"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star1"
+                                  title="Poor"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                              </div>
+                              <button class="btn btn-danger btn-hover loading-button" style="
+                              background-color: rgb(255, 68, 0);
+                             color: #fff;
+                             width: 8rem;
+                            ">              <span class="btn-text fw-bold">Click me</span>
+              <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item active">
+                          <div class="card m-2">
+                            <div class="position-relative">
+                              <img
+                                src="./assets/c.jpg"
+                                class="card-img-top"
+                                alt="Placeholder Image"
+                                style="height: 8rem"
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 m-1 start-0 p-2 bg-white rounded-circle"
+                                style="color: red"
+                              ></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Tajmahal-in Agara</h5>
+                              <p class="card-text">
+                                Some example text to fill the card. This is
+                                could be a description or any another in
+                                information.
+                              </p>
+                              <span
+                                ><small class="text-muted"
+                                  >Date and Time: April 26, 2024</small
+                                ></span
+                              >
+                              <div
+                                class="star-rating d-flex flex-row-reverse justify-content-end gap-1"
+                              >
+                                <input
+                                  type="radio"
+                                  id="star5"
+                                  name="rating1"
+                                  value="5"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star5"
+                                  title="Excellent"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star4"
+                                  name="rating1"
+                                  value="4"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star4"
+                                  title="Very good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+
+                                <input
+                                  type="radio"
+                                  id="star3"
+                                  name="rating1"
+                                  value="3"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star3"
+                                  title="Good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star2"
+                                  name="rating1"
+                                  value="2"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star2"
+                                  title="Fair"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star1"
+                                  name="rating1"
+                                  value="1"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star1"
+                                  title="Poor"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                              </div>
+                              <button class="btn btn-danger btn-hover loading-button" style="
+                              background-color: rgb(255, 68, 0);
+                             color: #fff;
+                             width: 8rem;
+                            ">              <span class="btn-text fw-bold">Click me</span>
+              <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item active">
+                          <div class="card m-2">
+                            <div class="position-relative">
+                              <img
+                                src="./assets/c.jpg"
+                                class="card-img-top"
+                                alt="Placeholder Image"
+                                style="height: 8rem"
+                              />
+                              <i
+                                class="fa-regular fa-heart heart-icons position-absolute top-0 m-1 start-0 p-2 bg-white rounded-circle"
+                                style="color: red"
+                              ></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Tajmahal-in Agara</h5>
+                              <p class="card-text">
+                                Some example text to fill the card. This is
+                                could be a description or any another in
+                                information.
+                              </p>
+                              <span
+                                ><small class="text-muted"
+                                  >Date and Time: April 26, 2024</small
+                                ></span
+                              >
+                              <div
+                                class="star-rating d-flex flex-row-reverse justify-content-end gap-1"
+                              >
+                                <input
+                                  type="radio"
+                                  id="star5"
+                                  name="rating1"
+                                  value="5"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star5"
+                                  title="Excellent"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star4"
+                                  name="rating1"
+                                  value="4"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star4"
+                                  title="Very good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+
+                                <input
+                                  type="radio"
+                                  id="star3"
+                                  name="rating1"
+                                  value="3"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star3"
+                                  title="Good"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star2"
+                                  name="rating1"
+                                  value="2"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star2"
+                                  title="Fair"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                                <input
+                                  type="radio"
+                                  id="star1"
+                                  name="rating1"
+                                  value="1"
+                                  class="d-none"
+                                />
+                                <label
+                                  for="star1"
+                                  title="Poor"
+                                  class="fs-2"
+                                  style="color: #ccc"
+                                  >&#9733;</label
+                                >
+                              </div>
+                              <button class="btn btn-danger btn-hover loading-button" style="
+                              background-color: rgb(255, 68, 0);
+                             color: #fff;
+                             width: 8rem;
+                            ">              <span class="btn-text fw-bold">Click me</span>
+              <span class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                        <!-- <span
+                          class="carousel-control-prev-icon"
+                          style="filter: invert(0) brightness(0)"
+                          aria-hidden="true"
+                        ></span> -->
+                        <i class="fa-solid fa-arrow-left fs-2 carousel-control-prev text-black"  style="
+                        width: rem;
+                        height: 2.5rem;
+                        top: 50%;
+                        transform: translate(-50%);
+                      "
+                       data-bs-target="#carouselExampleControls"
+                       data-bs-slide="prev"></i>
+                       
+                    
+                      <i class="fa-solid fa-arrow-right fs-2 carousel-control-next text-black"  style="
+                      width: rem;
+                      height: 2.5rem;
+                      top: 50%;
+                      transform: translate(60%);
+                    " type="button"
+                        data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"
+                    ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- //Right-section -->
+
+              <div class="col-lg-4 p-0 m-0 col-12">
+                <div class="row my-1 px-lg-4 px-3">
+                  <!-- //First-row  -->
+                  <div class="card col-12 shadow border rounded-3 p-0">
+                    <img
+                      src="./assets/l.png"
+                      class="card-img-top p-4 mx-1"
+                      alt="..."
+                    />
+                    <div class="card-body border-top p-1">
+                      <h4 class="card-title px-3 m-0 p-1 text-dark">
+                        More Information
+                      </h4>
+                      <p class="card-text m-0 px-3 p-1 text-dark text-wrap">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+
+                    <div class="card-body">
+                      <a href="#" class="card-link link-danger fw-bold px-3"
+                        >Find More>>></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-4 mx-lg-3 px-3 px-lg-0">
+                  <!-- //Second-row  -->
+                  <div class="card col-12 shadow border rounded-3 p-0">
+                    <img
+                      src="./assets/l1.png"
+                      class="card-img-top p-4 mx-1"
+                      alt="..."
+                    />
+                    <div class="card-body border-top p-1">
+                      <h4 class="card-title px-3 m-0 p-1 text-dark">
+                        More Information
+                      </h4>
+                      <p class="card-text m-0 px-3 p-1 text-dark text-wrap">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+
+                    <div class="card-body">
+                      <a href="#" class="card-link link-danger fw-bold px-3"
+                        >Find More>>></a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center">
+                  <!-- //Third-row  -->
+                  <div class="col-12 px-lg-4">
+                    <div class="rounded-3 shadow border m-1 text-color">
+                      <div class="scrollable-box">
+                        <!-- Multiple Inner Boxes -->
+                        <div
+                          class="row m-1 justify-content-center align-items-center p-1"
+                          y
+                        >
+                          <h3 class="mt-3 my-4 text-dark fw-bold">
+                            You might wanna know
+                          </h3>
+
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="link-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 d-flex justify-content-center align-items-center bg-white m-1"
+                          >
+                            <img
+                              src="./assets/l1.png"
+                              alt="Logo"
+                              style="width: 30%; height: 30%"
+                            />
+                            <div class="m-3">
+                              <h5 class="text-wrap text-dark">
+                                Is uber available in Sydney?
+                              </h5>
+                              <a href="" class="text-danger"
+                                >Find out more>>>></a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <!-- get to know section -->
+          <section class="container-fluid" style="background-color: #e5e8eb;">
+            <div class="container text-center p-4">
+              <h1 class="fw-bold my-5">Get to know Trips</h1>
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4 ">
+                  <div class="content-box shadow bg-white py-2 " >
+                    <i class="fas fa-robot p-2 border-2 border border-black rounded-circle" style="cursor: pointer;"></i>
+                    <p class="mt-2 fw-semibold">Get personalised recs with AI</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="content-box shadow bg-white py-2">
+                    <i class="fas fa-utensils p-2 border-2 border border-black rounded-circle " style="cursor: pointer;"></i>
+                    <p class="mt-2 fw-semibold">Save hotels, restaurants, and more</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="content-box shadow bg-white py-2">
+                    <i class="fas fa-map-marker-alt p-2 border-2 border border-black rounded-circle" style="cursor: pointer;"></i>
+                    <p class="mt-2 fw-semibold">See your saves on your custom map</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="content-box shadow bg-white py-2 ">
+                    <i class="fas fa-users p-2 border-2 border border-black rounded-circle" style="cursor: pointer;"></i>
+                    <p class="mt-2 fw-semibold">Share and collab with your travel buds</p>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4">Already started? <a href="./login.html" id="InButton" class="text-danger">Log in</a> to see your saved trips.</p>
+
+            </div>
+          </section>
+
+
+      <!-- frequesntly asked section -->
+      <section class="container-fluid">
+        <div class="container">
+          <h1 class="fw-bold my-5 m-lg-3">Frequently Asked Questions</h1>
+         <div class="row  m-1 shadow rounded-3">
+                <div class="col-12 ">
+                    <div class=" accordion pt-3 p-lg-3 rounded-3 ">
+                        <div class="accordion-items">
+                            <h2 class="accordion-header ">
+                                <button
+                                    class="accordion-button  border-bottom  fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                                    How does Skyscanner work?
+                                    
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse text-dark collapse">
+                               
+                              <div class="accordion-body">
+                                    We’re a flight, car hire and hotel search engine. We scan all the top airlines and
+                                    travel
+                                    providers across
+                                    the net, so you can compare flight fares and other travel costs in one place. Once
+                                    you’ve found
+                                    the best
+                                    flight, car hire or hotel, you book directly with the provider.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                                    How can I find the cheapest flight using Skyscanner?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    
+                                        Finding flights is easy here – over 100 million savvy travellers come to us each
+                                        month to find
+                                        cheap
+                                        flight tickets, hotels and car hire. Here are a few simple tips on how to get
+                                        the most out of
+                                        your flight
+                                        search.
+                                        Save money and timeWhether it's the fastest flight or the smartest stay, you can
+                                        pick your
+                                        preferred
+                                        flight provider or hotel based on real traveller ratings, and book instantly.
+
+                                        Search Everywhere. Go anywhere.Fancy a trip but don’t mind where? Or perhaps you
+                                        want to
+                                        discover
+                                        somewhere new. Search ‘Everywhere’ for the best budget airfare anywhere on any
+                                        given day.
+
+                                        Find the cheapest time to flyIf you have a destination in mind and want to find
+                                        the cheapest
+                                        flight,
+                                        choose ‘Cheapest month’ when you search. Then find flights on the cheapest day.
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold   bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Where should I book a flight to right now?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    
+                                        If you're looking for inspiration for your next trip, search Everywhere to find
+                                        a cheap flight
+                                        ticket
+                                        anywhere.
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold   bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                    aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Do I book my flight with Skyscanner?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    
+                                        We’re a search engine, so after you’ve found the best flight ticket you’ll book
+                                        directly with
+                                        the airline
+                                        or travel provider on their site. This will give you the opportunity to add any
+                                        loyalty
+                                        information you
+                                        would like and select your preferred flight options, such as seating.
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                    aria-expanded="false" aria-controls="flush-collapseFive">
+                                    What happens after I have booked my flight?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                   
+                                        Your flight booking confirmation email and all the other info you'll need will
+                                        come from the
+                                        airline or
+                                        provider you booked with. If you have any follow-up questions about your
+                                        booking, or want to
+                                        change or
+                                        cancel your flight, you’d need to get in touch with them.
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button  fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                    aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Does Skyscanner do hotels too?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                   
+                                        Yes! You can use the same magic that powers our flight search to find your
+                                        perfect stay
+                                        anywhere.
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+       <!-- Rating and review Section -->
+      <section class="container-fluid my-5">
+        <div class="container ">
+          <h1 class="fw-bold my-5 m-lg-3">Ratings and reviews</h1>
+
+          <div class="row m-1 shadow rounded-3">
+            
+
+            <div class="col-md-3 col d-flex flex-column align-items-center border-end">
+              <div class="display-3 fw-bold">4.5</div>
+              <div>
+                  <!-- Full stars -->
+                  <span class="star" style="color: gold;">&#9733;</span>
+                  <span class="star" style="color: gold;">&#9733;</span>
+                  <span class="star" style="color: gold;">&#9733;</span>
+                  <span class="star" style="color: gold;">&#9733;</span>
+                  <!-- Half star -->
+                  <span class="half-star position-relative d-inline-block " style="color: lightgrey;" >&#9733;</span>
+              </div>
+              <div class="mt-3">1,465 reviews</div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="row ">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between ">
+                        <span>Cleanliness</span>
+                        <span>4.5</span>
+                    </div>
+                    <div class="progress mb-3 " style="height: 0.6rem;">
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between ">
+                        <span>Location</span>
+                        <span>4.5</span>
+                    </div>
+                    <div class="progress mb-3 " style="height: 0.6rem;" >
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between ">
+                        <span>Service</span>
+                        <span>4.5</span>
+                    </div>
+                    <div class="progress mb-3 " style="height: 0.6rem;" >
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                    
+
+                 <!-- Second Column -->
+                 <div class="col-md-6" >
+                  <div class="d-flex justify-content-between ">
+                      <span>Rooms</span>
+                      <span>4.5</span>
+                  </div>
+                  <div class="progress mb-3 " style="height: 0.6rem;" >
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="d-flex justify-content-between ">
+                      <span>Value</span>
+                      <span>4.5</span>
+                  </div>
+                  <div class="progress mb-3 "style="height: 0.6rem;" >
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="d-flex justify-content-between ">
+                      <span>Sleep quality</span>
+                      <span>4.5</span>
+                  </div>
+                  <div class="progress mb-3 " style="height: 0.6rem;" >
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div>
+
+
+              
+                 
+
+          </div>
+                
+
+          
+
+
+        </div>
+    
+        <div class="row review-section mt-4">
+          <div class="mx-4">
+              <h2 class="">Some Reviews</h2>
+          </div>
+          <div class="col-12 mx-4 mt-4">
+              <div class="d-flex flex-column flex-md-row justify-content-between dropdown-container">
+                  <div class="d-flex flex-column flex-md-row">
+                      <div><h4 class="mt-1">Filter by</h4></div>
+                      <div class="d-flex flex-column flex-md-row mx-md-3 flex-wrap mt-2 mt-md-0">
+                          <div class="dropdown me-3 mb-2">
+                              <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allTravellersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  All travellers
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="allTravellersDropdown">
+                                  <li><a class="dropdown-item" href="#">Traveller 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Traveller 2</a></li>
+                              </ul>
+                          </div>
+                          <div class="dropdown me-3 mb-2">
+                              <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allLanguagesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  All languages
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="allLanguagesDropdown">
+                                  <li><a class="dropdown-item" href="#">English</a></li>
+                                  <li><a class="dropdown-item" href="#">Spanish</a></li>
+                              </ul>
+                          </div>
+                          <div class="dropdown">
+                              <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allProvidersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  All providers
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="allProvidersDropdown">
+                                  <li><a class="dropdown-item" href="#">Provider 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Provider 2</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="d-flex flex-column flex-md-row mt-4 mt-md-0">
+                      <div><h4 class="mt-1">Sort by</h4></div>
+                      <div class="dropdown mx-md-3 mt-2 mt-md-0">
+                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="sortByDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              Recommended
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+                              <li><a class="dropdown-item" href="#">Option 1</a></li>
+                              <li><a class="dropdown-item" href="#">Option 2</a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+
+              </div>
+              <div class="row mt-4  border-bottom pb-4 mb-2">
+                <div class="d-flex flex-column flex-md-row">
+                <div class="">
+                    <h4 class="mt-1">Mentioned by travellers</h4>
+                </div>
+                <div class="mx-md-3">
+                    <div class="d-flex flex-wrap">
+                        <button class="btn btn-outline-dark me-2 mb-2">All</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Reviews with photos (9)</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Service (34)</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Meal (25)</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Room (16)</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Location (15)</button>
+                        <button class="btn btn-outline-dark me-2 mb-2">Restaurant (10)</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container mt-5">
+              <!-- Review 1 -->
+              <div class="row border-bottom pb-4 mb-4">
+                  <div class="col-md-4 ">
+                      <div class=" pe-4  mx-5 mt-2 align-items-center">
+                          <h4>Family traveller</h4>
+                          <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                            <br>
+                            <small>Stayed in: Jun 2024</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="col-md-8 mt-4 mt-md-0">
+                      <div class="">
+                          <div class="d-flex align-items-center">
+                              <h1 class="me-2">5.0</h1>
+                              <span class="star" style="color: gold;">&#9733;</span>
+                              <span class="star" style="color: gold;">&#9733;</span>
+                              <span class="star" style="color: gold;">&#9733;</span>
+                              <span class="star" style="color: gold;">&#9733;</span>
+                              <span class="star" style="color: gold;">&#9733;</span>
+                          </div>
+                          <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                          <div class="extra-content" style="display: none;">
+                            <p>Additional text that becomes visible when "View more" is clicked.</p>
+                        </div>
+                        <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+                     <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                      <div class="col-6 col-md-3 mb-3 function ">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                        <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                    </div>
+                    <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                      
+                  </div>
+                  <div class="d-flex mt-3 align-items-center" style="color: grey;">
+                    <i class="fa-solid fa-thumbs-up fs-5 clickable" id="thumbsUpIcon"></i>
+                    <p class="mx-2 pt-3" id="helpfulText">Helpful?</p>
+                  </div>
+                      </div>
+                     
+                  </div>
+              </div>
+          
+              <div class="row border-bottom pb-4 mb-4">
+                <div class="col-md-4 ">
+                    <div class=" pe-4 mx-5 mt-2 align-items-center">
+                        <h4>Family traveller</h4>
+                        <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                          <br>
+                          <small>Stayed in: Jun 2024</small></div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-8 mt-4 mt-md-0">
+                    <div class="">
+                        <div class="d-flex align-items-center">
+                            <h1 class="me-2">5.0</h1>
+                            <span class="star" style="color: gold;">&#9733;</span>
+                            <span class="star" style="color: gold;">&#9733;</span>
+                            <span class="star" style="color: gold;">&#9733;</span>
+                            <span class="star" style="color: gold;">&#9733;</span>
+                            <span class="star" style="color: gold;">&#9733;</span>
+                        </div>
+                        <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                        <div class="extra-content" style="display: none;">
+                          <p>Additional text that becomes visible when "View more" is clicked.</p>
+                      </div>
+                      <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+                   <div class="row mt-3 ">
+                    <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                      <div class="col-6 col-md-3 mb-3 function ">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                        <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                    </div>
+                    <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                      
+                  </div>
+                    
+                    
+                    </div>
+                    
+                </div>
+                <div class="d-flex mt-3 align-items-center" style="color: grey;">
+                  <i class="fa-solid fa-thumbs-up fs-5 clickable" id="thumbsUpIcon"></i>
+                  <p class="mx-2 pt-3" id="helpfulText">Helpful?</p>
+                </div>
+                    </div>
+                   
+                </div>
+            </div>
+          
+            <div class="row pb-4 mb-4">
+              <div class="col-md-4 ">
+                  <div class=" pe-4 mx-5 mt-2 align-items-center">
+                      <h4>Family traveller</h4>
+                      <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                        <br>
+                        <small>Stayed in: Jun 2024</small></div>
+                      
+                  </div>
+              </div>
+              <div class="col-md-8 mt-4 mt-md-0">
+                  <div class="">
+                      <div class="d-flex align-items-center">
+                          <h1 class="me-2">5.0</h1>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                      </div>
+                      <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                      <div class="extra-content" style="display: none;">
+                        <p>Additional text that becomes visible when "View more" is clicked.</p>
+                    </div>
+                    <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+                    <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                      <div class="col-6 col-md-3 mb-3 function ">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                          <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                      </div>
+                      <div class="col-6 col-md-3 mb-3 function">
+                        <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                    </div>
+                    <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                      
+                  </div>
+                  <div class="d-flex mt-3 align-items-center" style="color: grey;">
+                    <i class="fa-solid fa-thumbs-up fs-5 clickable" id="thumbsUpIcon"></i>
+                    <p class="mx-2 pt-3" id="helpfulText">Helpful?</p>
+                  </div>
+                  </div>
+                 
+              </div>
+          </div>
+          </div>
+          
+          
+          
+      </div>
+      
+
+        
+      </section>
+
+
+     
+      <!-- Feedback Form Section -->
+     <section class="container-fluid my-5">
+  <div class="container">
+    <h1 class="fw-bold my-5 m-lg-3">Feedback Form</h1>
+
+    <!-- Form -->
+    <div class="row shadow rounded-3 p-4">
+        <div class="col-md-6">
+            <!-- Feedback Heading -->
+            <h2 class="fw-bold mb-4">Ask a question in the Help us make Scyscanner better! forum</h2>
+
+            <!-- Guidelines -->
+            <div class="border p-3">
+            <div class="mb-4 ">
+                <p class="fw-bold " style="color: rgb(255, 68, 0);">Before you post....</p>
+                   <p class=" fw-semibold"> While you're here, please keep in mind:</p>
+                
+                <ul>
+                    <li>Posts must adhere to our Community Guidelines.</li>
+                    <li>You must be at least 13 years old to post.</li>
+                    <li>No advertising or solicitation of any kind.</li>
+                    <li>We reserve the right to remove any post for any reason.</li>
+                </ul>
+            </div>
+
+            <!-- To get the best advice -->
+            <div class="mb-4 ">
+                <p class=" fw-semibold">To get the best advice, include:</p>
+                <ul>
+                    <li>Your budget</li>
+                    <li>Your travel companions</li>
+                    <li>Your part of town</li>
+                    <li>Your likes, dislikes</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 " style="margin-top: 5.5rem;">
+            
+          <form id="feedbackForm" onsubmit="return validateForm()">
+            <div class="mb-3 form-group">
+                <label for="inputEmail" class="form-label">Email address <span style="color: red;">*</span></label>
+                <input type="email" class="form-control" id="inputEmail" name="email">
+                <span class="error" id="emailError">Please enter your email</span>
+            </div>
+        
+            <div class="mb-3 form-group">
+                <label for="inputSubject" class="form-label">Subject <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="inputSubject" name="subject">
+                <span class="error" id="subjectError">Please enter the subject</span>
+            </div>
+        
+            <div class="mb-3 form-group">
+                <label for="inputMessage" class="form-label">Message <span style="color: red;">*</span></label>
+                <textarea class="form-control" id="inputMessage" rows="4" name="message"></textarea>
+                <span class="error" id="messageError">Please enter your message</span>
+            </div>
+        
+            <div class="mb-3 form-check form-group">
+                <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                <label class="form-check-label" for="agreeCheckbox">I agree to the terms and conditions <span style="color: red;">*</span></label>
+                <span class="error" id="checkboxError">Please agree to the terms and conditions</span>
+            </div>
+        
+            <div class="d-flex">
+                <button type="submit" class="btn btn-outline-dark me-3 fw-bold" style="width: 9rem;" id="submitButton">Submit</button>
+                <button type="button" class=" bg-transparent rounded-2 border fw-bold" style="color: rgb(255, 55, 0); width: 6rem;" id="previewButton">Preview</button>
+            </div>
+        </form>
+        
+          
+        </div>
+    </div>
+</div>
+
+        </section>
+
+
+
+      <!-- footer section -->
+      <div
+        class="container-fluid mt-5"
+        style="
+          background-image: linear-gradient(rgb(255, 55, 0), rgb(255, 107, 53));
+        "
+      >
+        <footer class="text-lg-center text-md-start text-start text-white">
+          <div class="container-fluid p-lg-4 p-0 pb-0">
+            <section class="">
+              <div class="row p-4">
+                <div class="col-lg-5 col-12 mb-4">
+                  <div
+                    class="fbutton fw-bold rounded-2 p-1"
+                    style="list-style: none; margin-left: 10vw"
+                  >
+                    <button
+                      id="globalIcon3"
+                      class="btn text-white d-flex justify-content-center  globe-icon align-items-center"
+                      style="background-color: rgba(44, 42, 42, 0.1);"
+                    >
+                      <li class="p-1"><i class="fas fa-flag mx-2"></i>India</li>
+                      <li class="p-1">English(UK)</li>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-2 col-md-12 text-lg-center text-md-start text-start mb-4"
+                >
+                <ul class="list-unstyled fw-bold mb-0 no-underline">
+                  <li class="p-2">
+                      <a href="#!" class="text-white">Help</a>
+                  </li>
+                  <li class="p-2">
+                      <a href="#!" class="text-white">Privacy Settings</a>
+                  </li>
+                  <li class="p-2">
+                      <a href="#!" class="text-white">Log In</a>
+                  </li>
+              </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div
+                  class="col-lg-2 col-md-12 text-lg-center text-md-start text-start mb-4"
+                >
+                  <ul class="list-unstyled fw-bold mb-0 no-underline ">
+                    <li class="p-2">
+                      <a href="#!" class="text-white">Cookie Policy</a>
+                    </li>
+                    <li class="p-2">
+                      <a href="#!" class="text-white">Privacy Policy</a>
+                    </li>
+                    <li class="p-2">
+                      <a href="#!" class="text-white">Terms of services</a>
+                    </li>
+                    <li class="p-2">
+                      <a href="#!" class="text-white">Company Details</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div
+                  class="col-lg-3 col-md-12 text-lg-center text-md-start text-start mb-4"
+                >
+                  <section class="container-fluid">
+                    <div class="accordion " style="margin-left: -0.6rem;">
+                      <div class="accordion-items ">
+                        <h2 class="accordion-header">
+                          <button
+                            id="accordion-buttons"
+                            class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse1"
+                          >
+                            <a href="#" class=" position-relative text-white text-decoration-none ">Explore</a>
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapse1"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled mb-0">
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Domestic flight</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Cities</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Last-minutes deals</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Airports</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Contries/Religions</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Ailines</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Flights</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Hotel</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Car hire</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">App</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Sitemap</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header">
+                          <button
+                            id="accordion-buttons"
+                            class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse2"
+                          >
+                          <a href="#" class=" position-relative text-white text-decoration-none ">Company</a>
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapse2"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled mb-0">
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Domestic flight</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Cities</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Last-minutes deals</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Airports</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Contries/Religions</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Ailines</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Flights</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Hotel</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Car hire</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">App</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Sitemap</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header">
+                          <button
+                            id="accordion-buttons"
+                            class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse3"
+                            aria-expanded="false"
+                            aria-controls="flush-collapse3"
+                          >
+                          <a href="#" class=" position-relative text-white text-decoration-none ">Partners</a>
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapse3"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled mb-0">
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Domestic flight</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Cities</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Last-minutes deals</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Airports</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Contries/Religions</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Ailines</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Flights</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Hotel</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Car hire</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">App</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Sitemap</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header">
+                          <button
+                            id="accordion-buttons"
+                            class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse4"
+                            aria-expanded="false"
+                            aria-controls="flush-collapse4"
+                          >
+                                                        <a href="#" class=" position-relative text-white text-decoration-none ">Trip</a>
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapse4"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled mb-0">
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Domestic flight</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Cities</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Last-minutes deals</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Airports</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Contries/Religions</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Ailines</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Flights</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Hotel</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Car hire</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">App</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Sitemap</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header">
+                          <button
+                            id="accordion-buttons"
+                            class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse5"
+                            aria-expanded="false"
+                            aria-controls="flush-collapse5"
+                          >
+                          <a href="#" class=" position-relative text-white text-decoration-none ">International Sites</a>
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapse5"
+                          class="accordion-collapse collapse text-white"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled mb-0">
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Domestic flight</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Cities</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Last-minutes deals</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Airports</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white"
+                                    >Contries/Religions</a
+                                  >
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Ailines</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Flights</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Hotel</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Car hire</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">App</a>
+                                </li>
+                                <li class="p-2">
+                                  <a href="#!" class="text-white">Sitemap</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="p-4 d-flex flex-column align-items-center" >
+            <div
+              class="text-lg-center text-md-start text-start"
+              style="font-size: 0.7rem"
+            >
+              Cheap flight booking from anywhere to everywhere
+            </div>
+            <div class="text-lg-center text-md-start text-start">
+              © 2020 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">
+                MDBootstrap.com</a
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      
+
+
+      <!-- Modal to be display -->
+      <div class="modal fade" id="preferencesModal" tabindex="-1" role="dialog" aria-labelledby="preferencesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content p-2">
+                <div class="modal-header d-flex justify-content-between align-items-center p-1">
+                    <h3 class="px-3" id="preferencesModalLabel">Preferences</h3>
+                    <button type="button" id="closeModalButton" class="close border-0 rounded-circle d-flex flex-column justify-content-center align-items-center text-center fs-2 bg-transparent close-btn" data-bs-dismiss="modal" aria-label="Close" style="width: 2.3rem; height: 2.3rem;">
+                        <span aria-hidden="true" class="pb-1">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="my-2">
+                        <h5><b>Choose a region and language</b></h5>
+                    </div>
+                    <div class="region-language row">
+                        <!-- Each button wrapped in col-6 for mobile and col-3 for larger screens -->
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">India<br />English</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Argentina<br />Español</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Australia<br />English</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Belgium<br />Nederlands</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Belgium<br />Français</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Brasil<br />Português</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Canada<br />English</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Canada<br />Français</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Chile<br />Español</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Colombia<br />Español</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-centert text-dark border-0">Denmark<br />Dansk</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Deutschland<br />Deutsch</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">España<br />Español</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">France<br />Français</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Hong Kong SAR<br />English</button>
+                        </div>
+                        <div class="col-6 col-lg-3 p-2">
+                            <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Indonesia<br />Indonesia</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 p-2 border-top">
+                    <small>Any changes to the preferences are optional and will persist through your user session.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="popupModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+        <div class="modal-content " style="height: 70vh;">
+          <button type="button" class="close close-btn rounded-circle" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="fs-5">&times;</span>
+          </button>
+          <div class="card w-100 gap-2">
+            <img src="./assets/b.jpg" class="img-fluid card-img-top rounded-top-3" alt="...">
+            <div class="card-body p-1">
+              <h4 class="card-title px-3 m-0 p-1 text-dark">World's best things to do for 2024</h4>
+              <p class="card-text m-0 px-3 p-1 text-dark text-wrap">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+            <button class="btn btn-danger btn-hover loading-button p-1 mb-5 mx-auto m-0" style="background-color: rgb(255, 68, 0); color: #fff; width: 90%;">
+              <span class="btn-text fw-bold">Go to somewhere</span>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
+          <!-- Modal -->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content d-flex flex-column justify-content-evenly align-items-stretch" style="height: 35rem;" >
+        <button type="button" class="close close-btn rounded-circle" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="fs-3">&times;</span>
+        </button>
+        <div class="modal-body text-center"><h5>Sign Up to unlock the best of Scyscanner</h5></div>
+        <div class="modal-body text-center">
+
+        
+          <div class="my-4 d-flex flex-column">
+            <button class="btn btn-primary btn-block my-2" style="background-color: rgb(255, 107, 53); border: none;">
+              <i class="fa-brands fa-google" style="width: 20px; margin-right: 10px;"></i> Continue with Google
+            </button>
+            <button class="btn  btn-block my-2 border-2 " >
+              <i class="fa-solid fa-envelope" style="width: 20px; margin-right: 10px;"></i>Continue with email
+            </button>
+          </div>
+
+        
+        </div>
+        <div class="mx-auto">               <p class="mt-4">Already started? <a href="./login.html" id="InButton" class="text-danger">Log in</a> to see your saved trips.</p></div>
+
+        <div class="modal-body text-center">          <p style="font-size: small;">By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement.</p>
+          <p style="font-size: small;">  This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply</p></div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0e00e08f23.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

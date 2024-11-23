@@ -1,0 +1,1595 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkySccanner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-m6eXF2rN0P2dHsJk1ZrwgFlmLbJF62B6s9kU3qy3ZIhZb/B3N/++sP2VeS7U1RgHcEo8x37aT6j/XdE4UMI46g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="d-flex flex-column">
+
+    <nav class="container-fluid 	">
+        <div class="container-fluid  ">
+            <div class="container-lg  container-fluid-md ">
+                <div class="row   align-items-center px-lg-5">
+
+                    <div class="col-12 justify-content-between d-flex   p-3">
+                        <div class="p-1 ">
+                            <a href="index2.html" style="cursor: pointer;"> <img src="./assets/lg.png" alt=""
+                                    style="width: 70%;"></a>
+                        </div>
+                        <div class=" align-items-center  justify-content-center d-flex  text-color">
+                            <div id="globalIcon2" class="d-lg-none align-items-center  justify-content-center  d-md-none d-flex ">
+                                <span class="  text-dark " style="font-size: small;"><small>EN <i class="fa fa-flag"
+                                            aria-hidden="true"></i>INR(₹)</small></span>
+                                <i class="fas fa-user d-lg-none mx-1 d-md-none d-flex "></i>
+                            </div>
+                            <div class="d-lg-flex align-items-center  justify-content-center  d-md-flex d-none">
+                                <small><a href="" class=" mx-2 fw-bold" style="color: rgb(255, 107, 53);">Help</a></small>
+                                <button id="globalIcon1"
+                                    class=" mx-2 text-black globe-icon m-0 p-0 rounded-3 bg-transparent border-0"><i
+                                        class="fs-5 px-1 pt-1  mp-0 fas fa-globe"></i></button>
+                                <button id="globalIcon2" class="btn m-1 mx-2 text-dark bg" style="font-size: small;   background-color: rgb(235, 234, 234);"><small>English(UK)
+                                        <i class="fa fa-flag" aria-hidden="true"></i> India ₹ INR</small></button>
+                                <button class="btn m-1 mx-2 fw-bold text-dark bg" style=" background-color: rgb(235, 234, 234);"><small>Login</small></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mx-lg-1 px-lg-5">
+                
+                <button class="col-sm-auto col mx-1  rounded-top-3 btn-color   justify-content-center align-items-center d-flex  d-flex align-items-center justify-content-center fw-bold  btn-color   loading-btn loading-button" style="color: #fff;background-color: rgb(223, 87, 0); border: 2px solid rgb(223, 87, 38);" > <span
+                  class=" d-flex justify-content-center align-items-center   btn-text"><i
+                      class=" btn-text mx-1 fa fa-plane" aria-hidden="true"></i> <span class="btn-text">Flight</span></span>
+              </button>
+              
+                <button class="col-sm-auto col mx-1  rounded-top-3 btn-color   justify-content-center align-items-center d-flex  d-flex align-items-center justify-content-center fw-bold  btn-color   loading-btn loading-button" style="color: #fff;background-color: rgb(255,153,70); border: 2px solid rgb(255,153,70);" > <span
+                  class=" d-flex justify-content-center align-items-center   btn-text"><i
+                      class=" btn-text mx-1 fa fa-bed" aria-hidden="true"></i> <span class="btn-text">Bed</span></span>
+              </button>
+                
+                    <button class="col-sm-auto col mx-1  rounded-top-3 btn-color   justify-content-center align-items-center d-flex  d-flex align-items-center justify-content-center fw-bold  btn-color   loading-btn loading-button" style="color: #fff;background-color: rgb(255,55,00); border: 2px solid rgb(255,55,0);" > <span
+                      class=" d-flex justify-content-center align-items-center   btn-text"><i
+                          class=" btn-text mx-1 fa fa-car" aria-hidden="true"></i> <span class="btn-text">Car</span></span>
+                  </button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </nav>
+
+
+    <div class="container-fluid p-lg-5  p-0   navsections">
+        <div class="container-lg px-lg-5 bg-colors  container-fluid">
+
+            <h1 class="text-white text d-none my-5" style="font-size: 4rem;">Find the right hotel today</h1>
+            <div class="container-lg container-fluid  rounded-3 " style="background-image: linear-gradient(rgb(255, 55, 0), rgb(255, 107, 53));">
+                <div class=" row mx-3 ">
+                    <h1 class="d-none d-md-flex d-sm-flex text-white my-3">Find the right hotel today</h1>
+                    <div class=" col-12 ">
+                        <div class=" row p-0 p-lg-3 pg-md-3">
+
+                            <div class="col-lg col-md col-12 p-0 m-0 d-flex  flex-column  ">
+                                <label for="" class="text-white m-1"><small>Is there</small></label>
+                                <input type="text" class="form-control p-3 rounded-0  border-end " style="border: none;" placeholder="Enter Hotel">
+                            </div>
+                            <div class="col-lg col-md col-12 p-0 m-0 d-flex  flex-column ">
+                                <label for="" class="text-white m-1"><small>Available in</small></label>
+                                <input type="text" class="form-control p-3 border-start rounded-0 " style="border: none;"
+                                    placeholder="Enter Place">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- //Second-row -->
+                            <div class="col text-white  d-flex rounded-top-3 flex-column  m-1 mb-4">
+                                <div class="row">
+                                    <div class="col-5 m-2">
+                                        <input type="checkbox" class="fs-1 ">
+                                        <span class=""><small>Direct flight only</small></span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row text-white m-1">
+                                            <div class="btn-group">
+                                                <button class="btn btn3 dropdown-toggle text-white " type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                                    <small>Adult 1</small>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col m-1">
+                                        <div class="btn-group">
+                                            <button class="btn  dropdown-toggle text-white" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                                <small>Econonomy</small>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col m-1">
+                                        <div class="btn-group">
+                                          <button class="btn text-white dropdown-toggle custom-focus" type="button"
+                                          data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                      <small>Payment</small>
+                                  </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-md col-sm-12 ">
+                                        <div class="row">
+                                            <button class="btn btn-color fw-bold text-light" style="background-color: rgb(223, 87, 38);"">Search &#8594 </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg container-fluid my-5 ">
+        <a class=" m-3 py-5" style="color: rgb(255, 107, 53);">Home <span class="fw-bold text-dark"> >Hotels</span></a>
+        <div class="row fw-bold  justify-content-center align-items-center d-flex p-3">
+
+            <div class="col-lg d-flex  bg-light rounded-3 p-3 shadow col-md col-12 my-lg-0 my-md-0 m-3 ">
+
+                <i class="fa fa-search mx-auto fs-5 mt-2 " aria-hidden="true"></i>
+                <p class="text-wrap mx-2 " style="font: x-small;">Find the best-value hotel for your dates, search by price or preferences</p>
+            </div>
+            <div class="col-lg d-flex bg-light rounded-3 p-3 shadow col-md col-12 my-lg-0 my-md-0 m-3 ">
+
+                <i class="fa fa-tag mx-auto fs-5 mt-2 "  aria-hidden="true"></i>
+                <p class="text-wrap mx-2">Compare hotel deals across hundreds of providers, all in one place</p>
+            </div>
+            <div class="col-lg d-flex bg-light rounded-3 p-3 shadow col-md col-12 my-lg-0 my-md-0 m-3 ">
+
+                <i class="fa fa-recycle mx-auto fs-5 mt-2"  aria-hidden="true"></i>
+                <p class="text-wrap mx-2">Look out for hotels with free cancellation or excellent ratings</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ">
+        <div class="container rounded-5 position-relative d-flex  text-white align-items-center" style=" height: 28rem; background: linear-gradient(rgba(117, 116, 116, 0.377), rgba(0, 0, 0, 0.404)), url('./assets/bg6.jpg') no-repeat center center; background-size: cover;">
+            <div class="container position-relative" style="z-index: 2;">
+                <div class="row  p-0 px-lg-5">
+                    <div class="col-md-6 col-12 p-0  p-lg-5 text-start">
+                        <h1 class=" fs-1 fw-bold" >Save on your <br> next hotel <br> booking
+                        </h1>
+                        <p class="">We’ve pulled together some top hotel deals, so you can find an amazing room at
+                            an even better price.</p>
+                        <a href="#" class="btn btn-color bg-white fw-bold text-dark ">See hotels deals</a>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 my-5 p-lg-5 justify-content-center align-items-center d-flex">
+                      <div class="triangle-container rounded-5 d-flex justify-content-center bg-white align-items-center" style="--bs-bg-opacity: .8; padding: 6px; width: fit-content;">
+                        <i class="fa fa-bed fw-bold fs-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                        <div class="fs-5 d-flex flex-column align-items-center text-dark mx-3">UP to <span class="fs-2 fw-bold">30% off</span></div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid my-5">
+        <div class="container px-5">
+            <h2 class="">Compare hotels across your favourite brands</h2>
+            <div class="d-flex flex-row flex-wrap justify-content-evenly">
+                <div class=" my-lg-0 my-md-0  ">
+                    <img src="./assets/i2.png" alt="">
+                </div>
+                <div class=" my-lg-0 my-md-0 m-3 ">
+                    <img src="./assets/i3.png" alt="">
+                </div>
+                <div class=" my-lg-0 my-md-0 m-3 ">
+                    <img src="./assets/i4.png" alt="">
+                </div>
+                <div class=" my-lg-0 my-md-0 m-3 ">
+                    <img src="./assets/i1.png" alt="">
+                </div>
+                <div class=" my-lg-0 my-md-0 m-3 ">
+                    <img src="./assets/i6.png" alt="">
+                </div>
+                <div class=" my-lg-0 my-md-0 m-3 ">
+                    <img src="./assets/i5.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid my-5">
+        <div class="container px-5 region-language">
+            <h2 class="my-3">Hotels in your home country</h2>
+            <p><small>Your next adventure may be closer than you think. Discover hotels just beyond your
+                    doorstep.</small></p>
+            <button class="btn btn-outline-dark bg-dark   my-2" style="color: #fff !important;">Mumbai</button>
+            <button class="btn btn1 btn-outline-dark border text-center text-dark ">New Delhi</button>
+            <button class="btn btn1 btn-outline-dark border text-center text-dark my-2">Kolkata</button>
+            <button class="btn btn1 btn-outline-dark border text-center text-dark my-2">Varanasi</button>
+            <button class="btn btn1 btn-outline-dark border text-center text-dark my-2">Goa</button>
+            <div class="row py-3  flex-nowrap overflow-auto">
+                <div
+                    class="card col-lg col-md col-11 my-lg-0 my-md-0 m-3  function  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+                    <img src="./assets/a.jpg" alt="" class="mb-2 rounded-top-3 w-100 h-100 " >
+                    <div class="row p-2">
+                        <div class="col-6 ">
+                            <b>Trident Nariman <br> Point</b>
+                            <small>14.14 km from city centre</small>
+                            <br>
+                            <small> <b>4.8 Excellent </b><span class="text-secondary">17 reviews</span></small>
+                        </div>
+                        <div class="col-6 text-end pe-3" style="font-size: 0.8rem;">
+                            <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);"  aria-hidden="true"></i>
+                            <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                            <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                            <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                            <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-12 py-4  border-top text-end">
+                            <b>₹11750</b>
+                            <br>
+                            <small class="text-secondary">per night</small>
+                        </div>
+                    </div>
+                </div>
+                <div
+                class="card col-lg col-md col-11 my-lg-0 my-md-0 m-3  function  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+                <img src="./assets/a.jpg" alt="" class="mb-2 rounded-top-3 w-100 h-100" >
+                <div class="row p-2">
+                    <div class="col-6 ">
+                        <b>Trident Nariman <br> Point</b>
+                        <small>14.14 km from city centre</small>
+                        <br>
+                        <small> <b>4.8 Excellent </b><span class="text-secondary">17 reviews</span></small>
+                    </div>
+                    <div class="col-6 text-end pe-3" style="font-size: 0.8rem;">
+                      <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);"  aria-hidden="true"></i>
+                      <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                      <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                      <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                      <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                  </div>
+                    <div class="col-12 py-4  border-top text-end">
+                        <b>₹11750</b>
+                        <br>
+                        <small class="text-secondary">per night</small>
+                    </div>
+                </div>
+            </div>
+            <div
+            class="card col-lg col-md col-11 my-lg-0 my-md-0 m-3  function  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+            <img src="./assets/a.jpg" alt="" class="mb-2 rounded-top-3 w-100 h-100" >
+            <div class="row p-2">
+                <div class="col-6 ">
+                    <b>Trident Nariman <br> Point</b>
+                    <small>14.14 km from city centre</small>
+                    <br>
+                    <small> <b>4.8 Excellent </b><span class="text-secondary">17 reviews</span></small>
+                </div>
+                <div class="col-6 text-end pe-3" style="font-size: 0.8rem;">
+                  <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);"  aria-hidden="true"></i>
+                  <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                  <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                  <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+                  <i class="fa fa-star   mx-1" style="color: rgb(255, 55, 0);" aria-hidden="true"></i>
+              </div>
+                <div class="col-12 py-4  border-top text-end">
+                    <b>₹11750</b>
+                    <br>
+                    <small class="text-secondary">per night</small>
+                </div>
+            </div>
+        </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid my-5" style="background-color: rgb(255, 55, 0); color: #ffffff;">
+        <div class="container p-5 ">
+            <h2 class="my-3">Fast facts</h2>
+            <p><small> Sleep easy, armed with the stuff that's good to know before you go.</small></p>
+            <div class="row   justify-content-center align-items-center d-flex ">
+
+                <div class="col-lg col-md col-12 py-lg-0 py-md-0 py-5 mx-3">
+
+                    <i class="fa fs-2 fa-building" class="mx-auto" aria-hidden="true"></i>
+                    <p class="text-wrap">Find the best-value hotel for your dates, search by price or preferences</p>
+                    <b class="fs-4">60+</b>
+                </div>
+                <div class="col-lg col-md col-12 py-lg-0 py-md-0 py-5 mx-3">
+
+                    <i class="fa fs-2 fa-location-arrow" class="mx-auto" aria-hidden="true"></i>
+                    <p class="text-wrap">Compare hotel deals across hundreds of providers, all in one place</p>
+                    <b class="fs-4">5,000+</b>
+                </div>
+                <div class="col-lg col-md col-12 py-lg-0 py-md-0 py-5 mx-3">
+
+                    <i class="fa fa-1 fa-bed" class="mx-auto" aria-hidden="true"></i>
+                    <p class="text-wrap">Look out for hotels with free cancellation or excellent ratings</p>
+                    <b class="fs-4">3.2 milion</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid my-5">
+        <div class="container px-5">
+            <h2 class="my-3 fw-bold">Hotels for fab city breaks</h2>
+            <p class="fw-bold"><small>The key to a great city break? A perfectly-placed base. Check out the best city centre
+                    hotels.</small></p>
+            <div class="row  flex-nowrap overflow-auto">
+                <div
+                    class="col-lg col-md function col-11 my-lg-0 my-md-0 m-3  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+                    <img src="./assets/c.jpg" alt="" class="mb-2 rounded-top-3" style="height: 100%; width: 100%;">
+                    <div class="row p-3 ">
+                        <div class="col-6">
+                            <b>Dubai</b>
+                            <br>
+                            <span><small>Unite Arab Emirates</small></span>
+                        </div>
+
+                        <div class="col-6   text-end">
+                            <small>From</small>
+                            <br>
+                            <b>₹11750</b>
+                            <br>
+                            <small class="text-secondary">per night</small>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-lg function col-md col-11 my-lg-0 my-md-0 m-3  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+                    <img src="./assets/b.jpg" alt="" class="mb-2 rounded-top-3" style="height: 100%; width: 100%;">
+                    <div class="row p-3 ">
+                        <div class="col-6">
+                            <b>Dubai</b>
+                            <br>
+                            <span><small>Unite Arab Emirates</small></span>
+                        </div>
+
+                        <div class="col-6   text-end">
+                            <small>From</small>
+                            <br>
+                            <b>₹11750</b>
+                            <br>
+                            <small class="text-secondary">per night</small>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-lg function col-md col-11 my-lg-0 my-md-0 m-3  shadow p-0 rounded-3 border flex-column d-flex justify-content-center ">
+                    <img src="./assets/a.jpg" alt="" class="mb-2 rounded-top-3" style="height: 100%; width: 100%;">
+                    <div class="row p-3 ">
+                        <div class="col-6">
+                            <b>Dubai</b>
+                            <br>
+                            <span><small>Unite Arab Emirates</small></span>
+                        </div>
+
+                        <div class="col-6   text-end">
+                            <small>From</small>
+                            <br>
+                            <b>₹11750</b>
+                            <br>
+                            <small class="text-secondary">per night</small>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid my-5">
+        <div class="container px-5">
+            
+            <div class="row my-5  rounded-3 justify-content-center align-items-center d-flex  shadow" style="background-color: rgb(235, 234, 234);" >
+
+                <div class="col-lg col-md col-12 mx-3 text-center">
+
+                    <img src="./assets/Stress-pana.png" alt="" class="p-3" style="width: 80%;">
+
+                    <b class="fs-4">Greate hotel's Deals</b>
+                    <p class="text-wrap">Find the best-value hotel for your dates, search by price or preferences</p>
+                </div>
+                <div class="col-lg col-md col-12 mx-3 text-center">
+
+                    <img src="./assets/Trip-cuate.png" alt="" class="p-3" style="width: 80%;">
+
+                    <b class="fs-4">Greate hotel's Deals</b>
+                    <p class="text-wrap">Find the best-value hotel for your dates, search by price or preferences</p>
+                </div>
+                <div class="col-lg col-md col-12 mx-3 text-center">
+
+                    <img src="./assets/Mind map-bro.png" alt="" class="p-3" style="width: 80%;">
+
+                    <b class="fs-4">Greate hotel's Deals</b>
+                    <p class="text-wrap">Find the best-value hotel for your dates, search by price or preferences</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid my-5 ">
+        <div class="container-lg container-fluid px-5">
+            <h2 class=" fw-bold  my-5 m-lg-3">FAQ's</h2>
+            <div class="row  m-1 shadow rounded-3">
+                <div class="col-12 ">
+                    <div class=" accordion pt-3 p-lg-3 rounded-3 ">
+                        <div class="accordion-items">
+                            <h2 class="accordion-header ">
+                                <button
+                                    class="accordion-button  border-bottom  fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                                    How does Skyscanner work?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse text-dark collapse">
+                                <div class="accordion-body">
+                                    We’re a flight, car hire and hotel search engine. We scan all the top airlines and
+                                    travel
+                                    providers across
+                                    the net, so you can compare flight fares and other travel costs in one place. Once
+                                    you’ve found
+                                    the best
+                                    flight, car hire or hotel, you book directly with the provider.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                                    How can I find the cheapest flight using Skyscanner?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    
+                                        Finding flights is easy here – over 100 million savvy travellers come to us each
+                                        month to find
+                                        cheap
+                                        flight tickets, hotels and car hire. Here are a few simple tips on how to get
+                                        the most out of
+                                        your flight
+                                        search.
+                                        Save money and timeWhether it's the fastest flight or the smartest stay, you can
+                                        pick your
+                                        preferred
+                                        flight provider or hotel based on real traveller ratings, and book instantly.
+
+                                        Search Everywhere. Go anywhere.Fancy a trip but don’t mind where? Or perhaps you
+                                        want to
+                                        discover
+                                        somewhere new. Search ‘Everywhere’ for the best budget airfare anywhere on any
+                                        given day.
+
+                                        Find the cheapest time to flyIf you have a destination in mind and want to find
+                                        the cheapest
+                                        flight,
+                                        choose ‘Cheapest month’ when you search. Then find flights on the cheapest day.
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold   bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Where should I book a flight to right now?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                   
+                                        If you're looking for inspiration for your next trip, search Everywhere to find
+                                        a cheap flight
+                                        ticket
+                                        anywhere.
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold   bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                    aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Do I book my flight with Skyscanner?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                   
+                                        We’re a search engine, so after you’ve found the best flight ticket you’ll book
+                                        directly with
+                                        the airline
+                                        or travel provider on their site. This will give you the opportunity to add any
+                                        loyalty
+                                        information you
+                                        would like and select your preferred flight options, such as seating.
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button  border-bottom fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                    aria-expanded="false" aria-controls="flush-collapseFive">
+                                    What happens after I have booked my flight?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                   
+                                        Your flight booking confirmation email and all the other info you'll need will
+                                        come from the
+                                        airline or
+                                        provider you booked with. If you have any follow-up questions about your
+                                        booking, or want to
+                                        change or
+                                        cancel your flight, you’d need to get in touch with them.
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-items">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button  fw-bold  bg-transparent text-dark collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                    aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Does Skyscanner do hotels too?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  
+                                        Yes! You can use the same magic that powers our flight search to find your
+                                        perfect stay
+                                        anywhere.
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Rating and review Section -->
+   <section class="container-fluid my-5">
+    <div class="container ">
+      <h1 class="fw-bold my-5 m-lg-3">Ratings and reviews</h1>
+
+      <div class="row m-1 shadow rounded-3">
+        
+
+        <div class="col-md-3 col d-flex flex-column align-items-center border-end">
+          <div class="display-3 fw-bold">4.5</div>
+          <div>
+              <!-- Full stars -->
+              <span class="star" style="color: gold;">&#9733;</span>
+              <span class="star" style="color: gold;">&#9733;</span>
+              <span class="star" style="color: gold;">&#9733;</span>
+              <span class="star" style="color: gold;">&#9733;</span>
+              <!-- Half star -->
+              <span class="half-star position-relative d-inline-block " style="color: lightgrey;" >&#9733;</span>
+          </div>
+          <div class="mt-3">1,465 reviews</div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="row ">
+            <!-- First Column -->
+            <div class="col-md-6">
+                <div class="d-flex justify-content-between ">
+                    <span>Cleanliness</span>
+                    <span>4.5</span>
+                </div>
+                <div class="progress mb-3 " style="height: 0.6rem;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex justify-content-between ">
+                    <span>Location</span>
+                    <span>4.5</span>
+                </div>
+                <div class="progress mb-3 " style="height: 0.6rem;" >
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex justify-content-between ">
+                    <span>Service</span>
+                    <span>4.5</span>
+                </div>
+                <div class="progress mb-3 " style="height: 0.6rem;" >
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+                
+
+             <!-- Second Column -->
+             <div class="col-md-6" >
+              <div class="d-flex justify-content-between ">
+                  <span>Rooms</span>
+                  <span>4.5</span>
+              </div>
+              <div class="progress mb-3 " style="height: 0.6rem;" >
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="d-flex justify-content-between ">
+                  <span>Value</span>
+                  <span>4.5</span>
+              </div>
+              <div class="progress mb-3 "style="height: 0.6rem;" >
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="d-flex justify-content-between ">
+                  <span>Sleep quality</span>
+                  <span>4.5</span>
+              </div>
+              <div class="progress mb-3 " style="height: 0.6rem;" >
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+          </div>
+
+
+          
+             
+
+      </div>
+            
+
+      
+
+
+    </div>
+
+    <div class="row review-section mt-4">
+      <div class="mx-4">
+          <h2 class="">Some Reviews</h2>
+      </div>
+      <div class="col-12 mx-4 mt-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between dropdown-container">
+              <div class="d-flex flex-column flex-md-row">
+                  <div><h4 class="mt-1">Filter by</h4></div>
+                  <div class="d-flex flex-column flex-md-row mx-md-3 flex-wrap mt-2 mt-md-0">
+                      <div class="dropdown me-3">
+                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allTravellersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              All travellers
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="allTravellersDropdown">
+                              <li><a class="dropdown-item" href="#">Traveller 1</a></li>
+                              <li><a class="dropdown-item" href="#">Traveller 2</a></li>
+                          </ul>
+                      </div>
+                      <div class="dropdown me-3">
+                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allLanguagesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              All languages
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="allLanguagesDropdown">
+                              <li><a class="dropdown-item" href="#">English</a></li>
+                              <li><a class="dropdown-item" href="#">Spanish</a></li>
+                          </ul>
+                      </div>
+                      <div class="dropdown">
+                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="allProvidersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              All providers
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="allProvidersDropdown">
+                              <li><a class="dropdown-item" href="#">Provider 1</a></li>
+                              <li><a class="dropdown-item" href="#">Provider 2</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="d-flex flex-column flex-md-row mt-4 mt-md-0">
+                  <div><h4 class="mt-1">Sort by</h4></div>
+                  <div class="dropdown mx-md-3 mt-2 mt-md-0">
+                      <button class="btn btn-outline-dark dropdown-toggle" type="button" id="sortByDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                          Recommended
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+                          <li><a class="dropdown-item" href="#">Option 1</a></li>
+                          <li><a class="dropdown-item" href="#">Option 2</a></li>
+                      </ul>
+                  </div>
+              </div>
+
+
+          </div>
+          <div class="row mt-4  border-bottom pb-4 mb-2">
+            <div class="d-flex flex-column flex-md-row">
+            <div class="">
+                <h4 class="mt-1">Mentioned by travellers</h4>
+            </div>
+            <div class="mx-md-3">
+                <div class="d-flex flex-wrap">
+                    <button class="btn btn-outline-dark me-2 mb-2">All</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Reviews with photos (9)</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Service (34)</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Meal (25)</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Room (16)</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Location (15)</button>
+                    <button class="btn btn-outline-dark me-2 mb-2">Restaurant (10)</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <!-- Review 1 -->
+          <div class="row border-bottom pb-4 mb-4">
+              <div class="col-md-4 ">
+                  <div class=" pe-4  mx-5 mt-2 align-items-center">
+                      <h4>Family traveller</h4>
+                      <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                        <br>
+                        <small>Stayed in: Jun 2024</small></div>
+                      
+                  </div>
+              </div>
+              <div class="col-md-8 mt-4 mt-md-0">
+                  <div class="">
+                      <div class="d-flex align-items-center">
+                          <h1 class="me-2">5.0</h1>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                          <span class="star" style="color: gold;">&#9733;</span>
+                      </div>
+                      <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                      <div class="extra-content" style="display: none;">
+                        <p>Additional text that becomes visible when "View more" is clicked.</p>
+                    </div>
+                    <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+                 <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                  <div class="col-6 col-md-3 mb-3 function ">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                <div class="col-6 col-md-3 mb-3 function">
+                  <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+              </div>
+              <div class="col-6 col-md-3 mb-3 function">
+                <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+            </div>
+                  
+              </div>
+              <div class="d-flex  mt-3" style="color: grey;">
+              
+                  <i class="fa-solid fa-thumbs-up fs-5 " ></i>
+            
+                  <p class="mx-2">Helpful?</p>
+                  
+              </div>
+                  </div>
+                 
+              </div>
+          </div>
+      
+          <div class="row border-bottom pb-4 mb-4">
+            <div class="col-md-4 ">
+                <div class=" pe-4 mx-5 mt-2 align-items-center">
+                    <h4>Family traveller</h4>
+                    <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                      <br>
+                      <small>Stayed in: Jun 2024</small></div>
+                    
+                </div>
+            </div>
+            <div class="col-md-8 mt-4 mt-md-0">
+                <div class="">
+                    <div class="d-flex align-items-center">
+                        <h1 class="me-2">5.0</h1>
+                        <span class="star" style="color: gold;">&#9733;</span>
+                        <span class="star" style="color: gold;">&#9733;</span>
+                        <span class="star" style="color: gold;">&#9733;</span>
+                        <span class="star" style="color: gold;">&#9733;</span>
+                        <span class="star" style="color: gold;">&#9733;</span>
+                    </div>
+                    <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                    <div class="extra-content" style="display: none;">
+                      <p>Additional text that becomes visible when "View more" is clicked.</p>
+                  </div>
+                  <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+               <div class="row mt-3 ">
+                <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                  <div class="col-6 col-md-3 mb-3 function ">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                <div class="col-6 col-md-3 mb-3 function">
+                  <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+              </div>
+              <div class="col-6 col-md-3 mb-3 function">
+                <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+            </div>
+                  
+              </div>
+                
+                
+                </div>
+                
+            </div>
+            <div class="d-flex  mt-3" style="color: grey;">
+            
+                <i class="fa-solid fa-thumbs-up fs-5 " ></i>
+          
+                <p class="mx-2">Helpful?</p>
+                
+            </div>
+                </div>
+               
+            </div>
+        </div>
+      
+        <div class="row pb-4 mb-4">
+          <div class="col-md-4 ">
+              <div class=" pe-4 mx-5 mt-2 align-items-center">
+                  <h4>Family traveller</h4>
+                  <div class=" mx-2 "><small>Comment: 15 Jun 2024</small>
+                    <br>
+                    <small>Stayed in: Jun 2024</small></div>
+                  
+              </div>
+          </div>
+          <div class="col-md-8 mt-4 mt-md-0">
+              <div class="">
+                  <div class="d-flex align-items-center">
+                      <h1 class="me-2">5.0</h1>
+                      <span class="star" style="color: gold;">&#9733;</span>
+                      <span class="star" style="color: gold;">&#9733;</span>
+                      <span class="star" style="color: gold;">&#9733;</span>
+                      <span class="star" style="color: gold;">&#9733;</span>
+                      <span class="star" style="color: gold;">&#9733;</span>
+                  </div>
+                  <p>Amit and his team very friendly and the service was excellent! Really made my mother's 80th birthday special and memorable! Lovely experience. Would definitely recommend to near and dear ones. Keep up the great work. Best wishes</p>
+                  <div class="extra-content" style="display: none;">
+                    <p>Additional text that becomes visible when "View more" is clicked.</p>
+                </div>
+                <a href="#" class="link-danger fw-bold text-decoration-none show-more">View more --></a>
+
+                <div class="row mt-3 flex-wrap flex-nowrap overflow-auto">
+                  <div class="col-6 col-md-3 mb-3 function ">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded border shadow border-2" alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                      <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 function">
+                    <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+                </div>
+                <div class="col-6 col-md-3 mb-3 function">
+                  <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+              </div>
+              <div class="col-6 col-md-3 mb-3 function">
+                <img src="./assets/bg1.jpg" class="img-fluid rounded   border shadow border-2 " alt="Review Image">
+            </div>
+                  
+              </div>
+          <div class="d-flex  mt-3" style="color: grey;">
+          
+              <i class="fa-solid fa-thumbs-up fs-5 " ></i>
+        
+              <p class="mx-2">Helpful?</p>
+              
+          </div>
+              </div>
+             
+          </div>
+      </div>
+      </div>
+      
+      
+      
+  </div>
+  
+
+    
+  </section>
+     
+
+        <!-- Feedback Form Section -->
+     <section class="container-fluid my-5">
+      <div class="container">
+        <h1 class="fw-bold my-5 m-lg-3">Feedback Form</h1>
+    
+        <div class="row shadow rounded-3 p-4">
+            <div class="col-md-6">
+               
+                <h2 class="fw-bold mb-4">Ask a question in the Help us make Scyscanner better! forum</h2>
+    
+                <div class="border p-3">
+                <div class="mb-4 ">
+                    <p class="fw-bold " style="color: rgb(255, 68, 0);">Before you post....</p>
+                       <p class=" fw-semibold"> While you're here, please keep in mind:</p>
+                    
+                    <ul>
+                        <li>Posts must adhere to our Community Guidelines.</li>
+                        <li>You must be at least 13 years old to post.</li>
+                        <li>No advertising or solicitation of any kind.</li>
+                        <li>We reserve the right to remove any post for any reason.</li>
+                    </ul>
+                </div>
+    
+                
+                <div class="mb-4 ">
+                    <p class=" fw-semibold">To get the best advice, include:</p>
+                    <ul>
+                        <li>Your budget</li>
+                        <li>Your travel companions</li>
+                        <li>Your part of town</li>
+                        <li>Your likes, dislikes</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 " style="margin-top: 5.5rem;">
+                
+              <form id="feedbackForm" onsubmit="return validateForm()">
+                <div class="mb-3 form-group">
+                    <label for="inputEmail" class="form-label">Email address <span style="color: red;">*</span></label>
+                    <input type="email" class="form-control" id="inputEmail" name="email">
+                    <span class="error" id="emailError">Please enter your email</span>
+                </div>
+            
+                <div class="mb-3 form-group">
+                    <label for="inputSubject" class="form-label">Subject <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="inputSubject" name="subject">
+                    <span class="error" id="subjectError">Please enter the subject</span>
+                </div>
+            
+                <div class="mb-3 form-group">
+                    <label for="inputMessage" class="form-label">Message <span style="color: red;">*</span></label>
+                    <textarea class="form-control" id="inputMessage" rows="4" name="message"></textarea>
+                    <span class="error" id="messageError">Please enter your message</span>
+                </div>
+            
+                <div class="mb-3 form-check form-group">
+                    <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                    <label class="form-check-label" for="agreeCheckbox">I agree to the terms and conditions <span style="color: red;">*</span></label>
+                    <span class="error" id="checkboxError">Please agree to the terms and conditions</span>
+                </div>
+            
+                <div class="d-flex">
+                    <button type="submit" class="btn btn-outline-dark me-3 fw-bold" style="width: 9rem;" id="submitButton">Submit</button>
+                    <button type="button" class=" bg-transparent rounded-2 border fw-bold" style="color: rgb(255, 55, 0); width: 6rem;" id="previewButton">Preview</button>
+                </div>
+            </form>
+            
+              
+            </div>
+        </div>
+    </div>
+    
+            </section>
+
+     <!-- footer section -->
+     <div
+     class="container-fluid mt-5"
+     style="
+       background-image: linear-gradient(rgb(255, 55, 0), rgb(255, 107, 53));
+     "
+   >
+     <footer class="text-lg-center text-md-start text-start text-white">
+       <div class="container-fluid p-lg-4 p-0 pb-0">
+         <section class="">
+           <div class="row p-4">
+             <div class="col-lg-5 col-12 mb-4">
+               <div
+                 class="fbutton fw-bold rounded-2 p-1"
+                 style="list-style: none; margin-left: 10vw"
+               >
+                 <button
+                   id="globalIcon3"
+                   class="btn text-white d-flex justify-content-center  globe-icon align-items-center"
+                   style="background-color: rgba(44, 42, 42, 0.1);"
+                 >
+                   <li class="p-1"><i class="fas fa-flag mx-2"></i>India</li>
+                   <li class="p-1">English(UK)</li>
+                 </button>
+               </div>
+             </div>
+             <div
+               class="col-lg-2 col-md-12 text-lg-center text-md-start text-start mb-4"
+             >
+             <ul class="list-unstyled fw-bold mb-0 no-underline">
+               <li class="p-2">
+                   <a href="#!" class="text-white">Help</a>
+               </li>
+               <li class="p-2">
+                   <a href="#!" class="text-white">Privacy Settings</a>
+               </li>
+               <li class="p-2">
+                   <a href="#!" class="text-white">Log In</a>
+               </li>
+           </ul>
+             </div>
+             <!--Grid column-->
+
+             <!--Grid column-->
+             <div
+               class="col-lg-2 col-md-12 text-lg-center text-md-start text-start mb-4"
+             >
+               <ul class="list-unstyled fw-bold mb-0 no-underline ">
+                 <li class="p-2">
+                   <a href="#!" class="text-white">Cookie Policy</a>
+                 </li>
+                 <li class="p-2">
+                   <a href="#!" class="text-white">Privacy Policy</a>
+                 </li>
+                 <li class="p-2">
+                   <a href="#!" class="text-white">Terms of services</a>
+                 </li>
+                 <li class="p-2">
+                   <a href="#!" class="text-white">Company Details</a>
+                 </li>
+               </ul>
+             </div>
+             <!--Grid column-->
+
+             <!--Grid column-->
+             <div
+               class="col-lg-3 col-md-12 text-lg-center text-md-start text-start mb-4"
+             >
+               <section class="container-fluid">
+                 <div class="accordion " style="margin-left: -0.6rem;">
+                   <div class="accordion-items ">
+                     <h2 class="accordion-header">
+                       <button
+                         id="accordion-buttons"
+                         class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#flush-collapse1"
+                       >
+                         <a href="#" class=" position-relative text-white text-decoration-none ">Explore</a>
+                       </button>
+                     </h2>
+                     <div
+                       id="flush-collapse1"
+                       class="accordion-collapse collapse"
+                     >
+                       <div class="accordion-body">
+                         <div class="accordion-body">
+                           <ul class="list-unstyled mb-0">
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Domestic flight</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Cities</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Last-minutes deals</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Airports</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Contries/Religions</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Ailines</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Flights</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Hotel</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Car hire</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">App</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Sitemap</a>
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="accordion-items">
+                     <h2 class="accordion-header">
+                       <button
+                         id="accordion-buttons"
+                         class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#flush-collapse2"
+                       >
+                       <a href="#" class=" position-relative text-white text-decoration-none ">Company</a>
+                       </button>
+                     </h2>
+                     <div
+                       id="flush-collapse2"
+                       class="accordion-collapse collapse"
+                     >
+                       <div class="accordion-body">
+                         <div class="accordion-body">
+                           <ul class="list-unstyled mb-0">
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Domestic flight</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Cities</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Last-minutes deals</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Airports</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Contries/Religions</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Ailines</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Flights</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Hotel</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Car hire</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">App</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Sitemap</a>
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="accordion-items">
+                     <h2 class="accordion-header">
+                       <button
+                         id="accordion-buttons"
+                         class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#flush-collapse3"
+                         aria-expanded="false"
+                         aria-controls="flush-collapse3"
+                       >
+                       <a href="#" class=" position-relative text-white text-decoration-none ">Partners</a>
+                       </button>
+                     </h2>
+                     <div
+                       id="flush-collapse3"
+                       class="accordion-collapse collapse"
+                     >
+                       <div class="accordion-body">
+                         <div class="accordion-body">
+                           <ul class="list-unstyled mb-0">
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Domestic flight</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Cities</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Last-minutes deals</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Airports</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Contries/Religions</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Ailines</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Flights</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Hotel</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Car hire</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">App</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Sitemap</a>
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="accordion-items">
+                     <h2 class="accordion-header">
+                       <button
+                         id="accordion-buttons"
+                         class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#flush-collapse4"
+                         aria-expanded="false"
+                         aria-controls="flush-collapse4"
+                       >
+                                                     <a href="#" class=" position-relative text-white text-decoration-none ">Trip</a>
+                       </button>
+                     </h2>
+                     <div
+                       id="flush-collapse4"
+                       class="accordion-collapse collapse"
+                     >
+                       <div class="accordion-body">
+                         <div class="accordion-body">
+                           <ul class="list-unstyled mb-0">
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Domestic flight</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Cities</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Last-minutes deals</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Airports</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Contries/Religions</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Ailines</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Flights</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Hotel</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Car hire</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">App</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Sitemap</a>
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="accordion-items">
+                     <h2 class="accordion-header">
+                       <button
+                         id="accordion-buttons"
+                         class="accordion-button p-2 bg-transparent text-white collapsed fw-bold"
+                         type="button"
+                         data-bs-toggle="collapse"
+                         data-bs-target="#flush-collapse5"
+                         aria-expanded="false"
+                         aria-controls="flush-collapse5"
+                       >
+                       <a href="#" class=" position-relative text-white text-decoration-none ">International Sites</a>
+                       </button>
+                     </h2>
+                     <div
+                       id="flush-collapse5"
+                       class="accordion-collapse collapse text-white"
+                     >
+                       <div class="accordion-body">
+                         <div class="accordion-body">
+                           <ul class="list-unstyled mb-0">
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Domestic flight</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Cities</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Last-minutes deals</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Airports</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white"
+                                 >Contries/Religions</a
+                               >
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Ailines</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Flights</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Hotel</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Car hire</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">App</a>
+                             </li>
+                             <li class="p-2">
+                               <a href="#!" class="text-white">Sitemap</a>
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </section>
+             </div>
+           </div>
+         </section>
+       </div>
+       
+     </footer>
+   </div>
+
+   <!-- Modal to be display -->
+   <div class="modal fade" id="preferencesModal" tabindex="-1" role="dialog" aria-labelledby="preferencesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content p-2">
+            <div class="modal-header d-flex justify-content-between align-items-center p-1">
+                <h3 class="px-3" id="preferencesModalLabel">Preferences</h3>
+                <button type="button" id="closeModalButton" class="close border-0 rounded-circle d-flex flex-column justify-content-center align-items-center text-center fs-2 bg-transparent close-btn" data-bs-dismiss="modal" aria-label="Close" style="width: 2.3rem; height: 2.3rem;">
+                    <span aria-hidden="true" class="pb-1">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="my-2">
+                    <h5><b>Choose a region and language</b></h5>
+                </div>
+                <div class="region-language row">
+                    <!-- Each button wrapped in col-6 for mobile and col-3 for larger screens -->
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">India<br />English</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Argentina<br />Español</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Australia<br />English</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Belgium<br />Nederlands</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Belgium<br />Français</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Brasil<br />Português</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Canada<br />English</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Canada<br />Français</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Chile<br />Español</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Colombia<br />Español</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-centert text-dark border-0">Denmark<br />Dansk</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Deutschland<br />Deutsch</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">España<br />Español</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">France<br />Français</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Hong Kong SAR<br />English</button>
+                    </div>
+                    <div class="col-6 col-lg-3 p-2">
+                        <button class="btn btn1 btn-outline-dark w-100 text-center text-dark border-0">Indonesia<br />Indonesia</button>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 p-2 border-top">
+                <small>Any changes to the preferences are optional and will persist through your user session.</small>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="popupModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style=" max-width: 100%; margin: 0.2rem;">
+    <div class="modal-content w-full min-h-50 m-auto" >
+    
+      <div class="card w-100 gap-2">
+        <img src="./assets/b.jpg" class="img-fluid card-img-top rounded-3 " style="height: 20rem; object-fit: cover;" alt="...">
+        <button type="button" class="close border-0" data-dismiss="modal" aria-label="Close">
+          <span class="fs-5" aria-hidden="true">&times;</span>
+        </button>
+        <div class="card-body  p-1">
+          <h4 class="card-title px-3 m-0 p-1 text-dark">World's best things to do for 2024</h4>
+          <p class="card-text m-0 px-3 p-1 text-dark text-wrap">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+         
+        </div>
+        <button class="btn btn-danger btn-hover loading-button p-1 mb-2 mx-3  m-0" style="background-color: rgb(255, 68, 0); color: #fff; width: 12rem;">
+          <span class="btn-text fw-bold">Go to somewhere</span>
+          <span class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<script src="script.js"></script>
+<script
+  src="https://kit.fontawesome.com/0e00e08f23.js"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+
+</html>
